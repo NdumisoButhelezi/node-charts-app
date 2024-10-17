@@ -1,0 +1,123 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charts Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Interactive Data Visualization Dashboard</h1>
+    </header>
+
+    <!-- Bento Grid for Charts -->
+    <div class="chart-grid">
+        <!-- Bar Chart Container -->
+        <div class="chart-container">
+            <canvas id="barChart"></canvas>
+            <p class="chart-metadata">Bar Chart: Comparing sales data for different products.</p>
+        </div>
+
+        <!-- Pie Chart Container -->
+        <div class="chart-container">
+            <canvas id="pieChart"></canvas>
+            <p class="chart-metadata">Pie Chart: Market share distribution of companies.</p>
+        </div>
+
+        <!-- Line Chart Container -->
+        <div class="chart-container">
+            <canvas id="lineChart"></canvas>
+            <p class="chart-metadata">Line Graph: Sales trends over the first quarter of the year.</p>
+        </div>
+
+        <!-- Scatter Plot Container -->
+        <div class="chart-container">
+            <canvas id="scatterPlot"></canvas>
+            <p class="chart-metadata">Scatter Plot: Relationship between advertising budget and sales performance.</p>
+        </div>
+    </div>
+
+    <script>
+        // Bar Chart
+        const barCtx = document.getElementById('barChart').getContext('2d');
+        const barChart = new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Product A', 'Product B', 'Product C', 'Product D', 'Product E'],
+                datasets: [{
+                    label: 'Sales (in units)',
+                    data: [12, 19, 3, 5, 10],
+                    backgroundColor: ['red', 'blue', 'green', 'purple', 'orange'],
+                }]
+            }
+        });
+
+        // Pie Chart
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        const pieChart = new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Company A', 'Company B', 'Company C', 'Company D'],
+                datasets: [{
+                    data: [30, 40, 20, 10],
+                    backgroundColor: ['yellow', 'orange', 'purple', 'blue']
+                }]
+            }
+        });
+
+        // Line Graph
+        const lineCtx = document.getElementById('lineChart').getContext('2d');
+        const lineChart = new Chart(lineCtx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April'],
+                datasets: [{
+                    label: 'Monthly Sales (in units)',
+                    data: [3, 10, 7, 15],
+                    borderColor: 'blue',
+                    fill: false
+                }]
+            }
+        });
+
+        // Scatter Plot
+        const scatterCtx = document.getElementById('scatterPlot').getContext('2d');
+        const scatterPlot = new Chart(scatterCtx, {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Ad Spend vs Sales',
+                    data: [
+                        { x: 500, y: 1000 },
+                        { x: 1000, y: 2500 },
+                        { x: 1500, y: 2700 },
+                        { x: 2000, y: 3200 },
+                    ],
+                    backgroundColor: 'red'
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom',
+                        title: {
+                            display: true,
+                            text: 'Ad Spend (in $)',
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Sales (in units)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
