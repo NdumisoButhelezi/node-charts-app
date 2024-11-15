@@ -7,29 +7,250 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
-    <header>
-        <h1>Interactive Data Visualization Dashboard</h1>
-    </header>
 
-    <div class="chart-grid">
-        <div class="chart-container">
-            <canvas id="barChart"></canvas>
-            <p class="chart-metadata">Bar Chart: Dynamic product sales data.</p>
-        </div>
-        <div class="chart-container">
-            <canvas id="pieChart"></canvas>
-            <p class="chart-metadata">Pie Chart: Company market share.</p>
-        </div>
-        <div class="chart-container">
-            <canvas id="lineChart"></canvas>
-            <p class="chart-metadata">Line Graph: Daily sales trends.</p>
-        </div>
-        <div class="chart-container">
-            <canvas id="scatterPlot"></canvas>
-            <p class="chart-metadata">Scatter Plot: Ad spend vs sales relationship.</p>
-        </div>
+    <body>
+        <header>
+            <h1>Interactive Data Visualization Dashboard</h1>
+        </header>
+    
+    <!-- Chart Section -->
+<div class="chart-grid">
+    <!-- Bar Chart -->
+    <div class="chart-container">
+        <canvas id="barChart"></canvas>
+        <p class="chart-metadata">
+            <b>Bar Chart:</b> Used to compare different categories of data, such as product sales or revenue across regions. Each bar represents a category, with its height or length showing the value.
+        </p>
     </div>
+
+    <!-- Pie Chart -->
+    <div class="chart-container">
+        <canvas id="pieChart"></canvas>
+        <p class="chart-metadata">
+            <b>Pie Chart:</b> Best for visualizing proportions within a whole. For example, it can show the percentage of market share held by each company or the distribution of resources across departments.
+        </p>
+    </div>
+
+    <!-- Line Chart -->
+    <div class="chart-container">
+        <canvas id="lineChart"></canvas>
+        <p class="chart-metadata">
+            <b>Line Graph:</b> Ideal for tracking changes and trends over time, such as daily sales figures, stock prices, or website traffic. Useful for identifying patterns or seasonal variations.
+        </p>
+    </div>
+
+    <!-- Scatter Plot -->
+    <div class="chart-container">
+        <canvas id="scatterPlot"></canvas>
+        <p class="chart-metadata">
+            <b>Scatter Plot:</b> Shows relationships or correlations between two variables. For instance, it can illustrate how advertising spend impacts sales or how employee satisfaction correlates with productivity.
+        </p>
+    </div>
+</div>
+
+    
+        <section class="cheat-sheet">
+            <h2>Business Intelligence Cheat Sheet</h2>
+            <div class="cheat-grid">
+        
+                <!-- Key Definitions -->
+                <div class="card">
+                    <h3>Key Definitions</h3>
+                    <ul>
+                        <li><b>Data Warehouse:</b> Central repository for historical and integrated data.</li>
+                        <li><b>Data Integration:</b> Combines data from multiple sources for a unified view.</li>
+                        <li><b>Metadata:</b> Data about data, describing structure and usage.</li>
+                        <li><b>Business Report:</b> Structured document with insights for decision-making.</li>
+                    </ul>
+                </div>
+        
+                <!-- BI System Components -->
+                <div class="card">
+                    <h3>BI System Components</h3>
+                    <ul>
+                        <li><b>Data Warehouse:</b> Stores historical and real-time data.</li>
+                        <li><b>Business Analytics:</b> Tools for querying, analyzing, and visualizing data.</li>
+                        <li><b>BPM:</b> Monitors and evaluates performance against goals.</li>
+                        <li><b>User Interface:</b> Dashboards for user interaction.</li>
+                    </ul>
+                </div>
+        
+                <!-- Decision-Making Styles -->
+                <div class="card">
+                    <h3>Decision-Making Styles</h3>
+                    <ul>
+                        <li><b>Heuristic:</b> Relies on mental shortcuts.</li>
+                        <li><b>Analytic:</b> Uses systematic analysis.</li>
+                        <li><b>Autocratic:</b> Decision by one individual.</li>
+                        <li><b>Collaborative:</b> Decisions made by a group.</li>
+                    </ul>
+                </div>
+        
+                <!-- Characteristics of a Data Warehouse -->
+                <div class="card">
+                    <h3>Characteristics of a Data Warehouse</h3>
+                    <ul>
+                        <li><b>Subject-Oriented:</b> Focused on business areas like sales.</li>
+                        <li><b>Integrated:</b> Combines data into a consistent format.</li>
+                        <li><b>Time-Variant:</b> Historical data for trend analysis.</li>
+                        <li><b>Non-Volatile:</b> Data remains stable once stored.</li>
+                    </ul>
+                </div>
+        
+                <!-- Reactive -->
+                <div class="card reactive">
+                    <h3>Reactive</h3>
+                    <p>Responding after changes occur. For example, adjusting prices only after a competitor introduces a lower price.</p>
+                </div>
+        
+                <!-- Anticipative -->
+                <div class="card anticipative">
+                    <h3>Anticipative</h3>
+                    <p>Preparing for expected changes before they happen, such as increasing production ahead of anticipated demand.</p>
+                </div>
+        
+                <!-- Adaptive -->
+                <div class="card adaptive">
+                    <h3>Adaptive</h3>
+                    <p>Adjusting continuously to changes in the environment, such as updating technologies to keep pace with innovation.</p>
+                </div>
+        
+                <!-- Proactive -->
+                <div class="card proactive">
+                    <h3>Proactive</h3>
+                    <p>Taking initiative to create or influence changes, like launching new products or forming strategic alliances.</p>
+                </div>
+        
+                <!-- Web Mining -->
+                <div class="card web-mining">
+                    <h3>Web Mining Overview</h3>
+                    <p>The Web is the largest repository of data but presents challenges such as complexity and domain ambiguity. Web mining extracts intrinsic relationships from web data, including textual, link-based, or usage patterns.</p>
+                </div>
+        
+                <!-- Web Content Mining -->
+                <div class="card content-mining">
+                    <h3>Web Content Mining</h3>
+                    <p>Extraction of useful information from web pages, including textual data and hyperlinks.</p>
+                </div>
+        
+                <!-- Search Engine Optimization -->
+                <div class="card seo">
+                    <h3>Search Engine Optimization (SEO)</h3>
+                    <ul>
+                        <li><b>White-Hat SEO:</b> Producing results based on good site design and accurate content for users.</li>
+                        <li><b>Black-Hat SEO:</b> Techniques like spamdexing and deception to manipulate rankings.</li>
+                    </ul>
+                    <p><b>Goal:</b> Improve website visibility in unpaid (organic) search results to attract more visitors.</p>
+                </div>
+        
+                <!-- Web Usage Mining -->
+                <div class="card usage-mining">
+                    <h3>Web Usage Mining</h3>
+                    <ul>
+                        <li>Determines the lifetime value of clients.</li>
+                        <li>Designs cross-marketing strategies across products.</li>
+                        <li>Evaluates promotional campaigns.</li>
+                        <li>Targets electronic ads and coupons based on user access patterns.</li>
+                        <li>Predicts user behavior using learned rules and profiles.</li>
+                    </ul>
+                </div>
+        
+                <!-- Social Analytics -->
+                <div class="card social-analytics">
+                    <h3>Social Analytics and Social Networks</h3>
+                    <p>Social networks are structures of individuals or groups linked through relationships. Analysis of these networks is interdisciplinary, involving fields like sociology, psychology, and graph theory.</p>
+                    <p><b>Types of Networks:</b> Communication, community, criminal, innovation, and more.</p>
+                </div>
+        
+                <!-- Social Media Types -->
+                <div class="card social-media">
+                    <h3>Social Media Types</h3>
+                    <ul>
+                        <li><b>Collaborative Projects:</b> e.g., Wikipedia</li>
+                        <li><b>Blogs and Microblogs:</b> e.g., Twitter</li>
+                        <li><b>Content Communities:</b> e.g., YouTube</li>
+                        <li><b>Social Networking Sites:</b> e.g., Facebook</li>
+                        <li><b>Virtual Worlds:</b> e.g., Second Life, World of Warcraft</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cheat-sheet">
+            <h2>Business Intelligence Q&A</h2>
+            <div class="cheat-grid">
+        
+                <!-- Question 1 -->
+                <div class="card">
+                    <h3>1.1 Organization Responses to Business Intelligence</h3>
+                    <p><b>Correct Answer:</b> D. All of the above</p>
+                    <p><b>Explanation:</b> Organizations can respond in various ways to business intelligence, including being reactive, anticipative, adaptive, or proactive.</p>
+                </div>
+        
+                <!-- Question 2 -->
+                <div class="card">
+                    <h3>1.2 Gaming Company Scenario</h3>
+                    <p><b>Correct Answer:</b> B. Reactive</p>
+                    <p><b>Explanation:</b> Changing a feature after receiving negative feedback is a reactive response, as the company acted after the issue occurred.</p>
+                </div>
+        
+                <!-- Question 3 -->
+                <div class="card">
+                    <h3>1.3 Metadata Definition</h3>
+                    <p><b>Correct Answer:</b> D. Data about data</p>
+                    <p><b>Explanation:</b> Metadata provides information about data's structure, origin, and context, helping in data management and analysis.</p>
+                </div>
+        
+                <!-- Question 4 -->
+                <div class="card">
+                    <h3>1.4 Managerial Actions Using BI</h3>
+                    <p><b>Correct Answer:</b> D. All of the above</p>
+                    <p><b>Explanation:</b> Managers can use BI insights to restructure processes, form alliances, or enhance corporate systems.</p>
+                </div>
+        
+                <!-- Question 5 -->
+                <div class="card">
+                    <h3>1.5 Data Mining Characteristics</h3>
+                    <p><b>Correct Answer:</b> B. It allows users to analyze data from a single dimension or angle at a time</p>
+                    <p><b>Explanation:</b> Data mining enables multi-dimensional analysis and discovers patterns across various fields, unlike analyzing data from a single perspective.</p>
+                </div>
+        
+                <!-- Question 6 -->
+                <div class="card">
+                    <h3>1.6 Gaming Company Scenario (Repeated)</h3>
+                    <p><b>Correct Answer:</b> B. Reactive</p>
+                    <p><b>Explanation:</b> The decision to change after customer feedback reflects a reactive approach.</p>
+                </div>
+        
+                <!-- Question 7 -->
+                <div class="card">
+                    <h3>1.7 Incorrect Statement About Data Mining</h3>
+                    <p><b>Correct Answer:</b> B. It allows users to analyze data from a single dimension or angle at a time</p>
+                    <p><b>Explanation:</b> Data mining works across multiple dimensions and perspectives to summarize data into actionable insights.</p>
+                </div>
+        
+                <!-- Question 8 -->
+                <div class="card">
+                    <h3>1.8 Decision Making Exclusion</h3>
+                    <p><b>Correct Answer:</b> B. Document Matcher</p>
+                    <p><b>Explanation:</b> While groupthink, real system experimentation, and time pressure are typical in decision-making, "Document Matcher" is not relevant.</p>
+                </div>
+        
+                <!-- Discussion: Functions of Business Reports -->
+                <div class="card">
+                    <h3>7. Typical Functions of Business Reports</h3>
+                    <ul>
+                        <li>Provide performance metrics such as KPIs and SLAs.</li>
+                        <li>Inform strategic decisions with actionable insights.</li>
+                        <li>Analyze past performance trends for improvement.</li>
+                        <li>Communicate findings to stakeholders effectively.</li>
+                        <li>Record and preserve organizational memory for future reference.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        
 
     <script>
         let barChart;
